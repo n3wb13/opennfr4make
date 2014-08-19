@@ -11,18 +11,158 @@ XSUM ?= md5sum
 BUILD_DIR = $(CURDIR)/builds/$(DISTRO)/$(MACHINE)
 TOPDIR = $(BUILD_DIR)
 DL_DIR = $(CURDIR)/sources
-SSTATE_DIR = $(CURDIR)/builds/$(DISTRO)/$(MACHINE)/sstate-cache
+SSTATE_DIR = $(CURDIR)/builds/$(DISTRO)/sstate-cache
 TMPDIR = $(TOPDIR)/tmp
 DEPDIR = $(TOPDIR)/.deps
 MACHINEBUILD = $(MACHINE)
 export MACHINEBUILD
 
+ifeq ($(MACHINEBUILD),tm2t)
+brands=dags
+else ifeq ($(MACHINEBUILD),tmnano)
+brands=dags
+else ifeq ($(MACHINEBUILD),tmnano2t)
+brands=dags
+else ifeq ($(MACHINEBUILD),tmsingle)
+brands=dags
+else ifeq ($(MACHINEBUILD),tmtwin)
+brands=dags
+else ifeq ($(MACHINEBUILD),iqonios100hd)
+brands=dags
+else ifeq ($(MACHINEBUILD),iqonios200hd)
+brands=dags
+else ifeq ($(MACHINEBUILD),roxxs200hd)
+brands=dags
+else ifeq ($(MACHINEBUILD),mediaart200hd)
+brands=dags
+else ifeq ($(MACHINEBUILD),iqonios300hd)
+brands=dags
+else ifeq ($(MACHINEBUILD),force1)
+brands=dags
+else ifeq ($(MACHINEBUILD),optimussos1plus)
+brands=dags
+else ifeq ($(MACHINEBUILD),optimussos2plus)
+brands=dags
+else ifeq ($(MACHINEBUILD),optimussos1)
+brands=dags
+else ifeq ($(MACHINEBUILD),optimussos2)
+brands=dags
+else ifeq ($(MACHINEBUILD),mediabox)
+brands=dags 
+else ifeq ($(MACHINEBUILD),quadbox2400)
+brands=skylake
+else ifeq ($(MACHINEBUILD),classm)
+brands=odin
+else ifeq ($(MACHINEBUILD),axodin)
+brands=odin
+else ifeq ($(MACHINEBUILD),caxodin)
+brands=odin
+else ifeq ($(MACHINEBUILD),saxodin)
+brands=odin
+else ifeq ($(MACHINEBUILD),axodinc)
+brands=odin
+else ifeq ($(MACHINEBUILD),starsatlx)
+brands=odin
+else ifeq ($(MACHINEBUILD),genius)
+brands=odin
+else ifeq ($(MACHINEBUILD),evo)
+brands=odin
+else ifeq ($(MACHINEBUILD),geniuse3hd)
+brands=odin
+else ifeq ($(MACHINEBUILD),evoe3hd)
+brands=odin
+else ifeq ($(MACHINEBUILD),axase3)
+brands=odin
+else ifeq ($(MACHINEBUILD),axase3c)
+brands=odin
+else ifeq ($(MACHINEBUILD),maram9)
+brands=odin
+else ifeq ($(MACHINEBUILD),ventonhdx)
+brands=ini
+else ifeq ($(MACHINEBUILD),sezam5000hd)
+brands=ini
+else ifeq ($(MACHINEBUILD),beyonwizt3)
+brands=ini
+else ifeq ($(MACHINEBUILD),sezam1000hd)
+brands=ini
+else ifeq ($(MACHINEBUILD),sezammarvel)
+brands=ini
+else ifeq ($(MACHINEBUILD),xpeedlx)
+brands=ini
+else ifeq ($(MACHINEBUILD),xpeedlx3)
+brands=ini
+else ifeq ($(MACHINEBUILD),mbmini)
+brands=ini
+else ifeq ($(MACHINEBUILD),atemio5x00)
+brands=ini
+else ifeq ($(MACHINEBUILD),atemionemesis)
+brands=ini
+else ifeq ($(MACHINEBUILD),mbtwin)
+brands=ini
+else ifeq ($(MACHINEBUILD),dcube)
+brands=cube
+else ifeq ($(MACHINEBUILD),mkcube)
+brands=cube
+else ifeq ($(MACHINEBUILD),ultima)
+brands=cube
+else ifeq ($(MACHINEBUILD),xp1000mk)
+brands=xp
+else ifeq ($(MACHINEBUILD),xp1000max)
+brands=xp
+else ifeq ($(MACHINEBUILD),sf8)
+brands=xp
+else ifeq ($(MACHINEBUILD),xp1000plus)
+brands=xp
+else ifeq ($(MACHINEBUILD),sogno8800hd)
+brands=blackbox
+else ifeq ($(MACHINEBUILD),uniboxhde)
+brands=blackbox
+else ifeq ($(MACHINEBUILD),enfinity)
+brands=entwopia
+else ifeq ($(MACHINEBUILD),marvel1)
+brands=entwopia
+else ifeq ($(MACHINEBUILD),vuduo)
+brands=vuplus
+else ifeq ($(MACHINEBUILD),vuduo2)
+brands=vuplus
+else ifeq ($(MACHINEBUILD),vuuno)
+brands=vuplus
+else ifeq ($(MACHINEBUILD),vusolo2)
+brands=vuplus
+else ifeq ($(MACHINEBUILD),vusolo)
+brands=vuplus
+else ifeq ($(MACHINEBUILD),vuultimo)
+brands=vuplus
+else ifeq ($(MACHINEBUILD),gb800se)
+brands=gigablue
+else ifeq ($(MACHINEBUILD),gb800seplus)
+brands=gigablue
+else ifeq ($(MACHINEBUILD),gbipbox)
+brands=gigablue
+else ifeq ($(MACHINEBUILD),gb800solo)
+brands=gigablue
+else ifeq ($(MACHINEBUILD),gb800ue)
+brands=gigablue
+else ifeq ($(MACHINEBUILD),gb800ueplus)
+brands=gigablue
+else ifeq ($(MACHINEBUILD),gbquad)
+brands=gigablue
+else ifeq ($(MACHINEBUILD),gbquadplus)
+brands=gigablue
+else ifeq ($(MACHINEBUILD),dm800)
+brands=dream
+else ifeq ($(MACHINEBUILD),dm7020hd)
+brands=dream
+endif
+
 BBLAYERS ?= \
 	$(CURDIR)/meta-openembedded/meta-oe \
 	$(CURDIR)/meta-openembedded/meta-multimedia \
 	$(CURDIR)/meta-openembedded/meta-networking \
+	$(CURDIR)/meta-openembedded/meta-filesystems \
 	$(CURDIR)/openembedded-core/meta \
-	$(CURDIR)/meta-oe-alliance \
+	$(CURDIR)/meta-oe-alliance/meta-oe \
+	$(CURDIR)/meta-oe-alliance/meta-brands/meta-$(brands) \
 
 CONFFILES = \
 	$(TOPDIR)/env.source \
@@ -50,7 +190,7 @@ all: init
 	@echo "Openembedded for the oe-alliance environment has been initialized"
 	@echo "properly. Now you can start building your image, by doing either:"
 	@echo
-	@echo "MACHINE=vuuno DISTRO=openvix make image"
+	@echo "MACHINE=xpeedlx DISTRO=opennfr make image"
 	@echo "	or"
 	@echo "cd $(BUILD_DIR) ; source env.source ; bitbake $(DISTRO)-image"
 	@echo
@@ -107,9 +247,18 @@ MACHINEBUILD=optimussos2
 else ifeq ($(MACHINEBUILD),mediabox)
 MACHINE=dags1
 MACHINEBUILD=mediabox
+else ifeq ($(MACHINEBUILD),quadbox2400)
+MACHINE=hd2400
+MACHINEBUILD=quadbox2400
 else ifeq ($(MACHINEBUILD),classm)
 MACHINE=odinm7
 MACHINEBUILD=classm
+else ifeq ($(MACHINEBUILD),saxodin)
+MACHINE=odinm7s
+MACHINEBUILD=axodin
+else ifeq ($(MACHINEBUILD),caxodin)
+MACHINE=odinm7c
+MACHINEBUILD=axodin
 else ifeq ($(MACHINEBUILD),axodin)
 MACHINE=odinm7
 MACHINEBUILD=axodin
@@ -146,6 +295,9 @@ MACHINEBUILD=ventonhdx
 else ifeq ($(MACHINEBUILD),sezam5000hd)
 MACHINE=inihdx
 MACHINEBUILD=sezam5000hd
+else ifeq ($(MACHINEBUILD),beyonwizt3)
+MACHINE=inihdx
+MACHINEBUILD=beyonwizt3
 else ifeq ($(MACHINEBUILD),sezam1000hd)
 MACHINE=inihde
 MACHINEBUILD=sezam1000hd
@@ -164,6 +316,9 @@ MACHINEBUILD=mbmini
 else ifeq ($(MACHINEBUILD),atemio5x00)
 MACHINE=inihde
 MACHINEBUILD=atemio5x00
+else ifeq ($(MACHINEBUILD),atemionemesis)
+MACHINE=inihdp
+MACHINEBUILD=atemionemesis
 else ifeq ($(MACHINEBUILD),mbtwin)
 MACHINE=inihdx
 MACHINEBUILD=mbtwin
@@ -212,6 +367,12 @@ MACHINEBUILD=sogno8800hd
 else ifeq ($(MACHINEBUILD),uniboxhde)
 MACHINE=blackbox7405
 MACHINEBUILD=uniboxhde
+else ifeq ($(MACHINEBUILD),enfinity)
+MACHINE=ew7358
+MACHINEBUILD=enfinity
+else ifeq ($(MACHINEBUILD),marvel1)
+MACHINE=ew7358
+MACHINEBUILD=marvel1
 endif
 
 initialize: init
@@ -278,6 +439,7 @@ $(TOPDIR)/conf/$(DISTRO).conf: $(DEPDIR)/.$(DISTRO).conf.$($(DISTRO)_CONF_HASH)
 	@echo 'CONF_VERSION = "1"' >> $@
 	@echo 'EXTRA_IMAGE_FEATURES = "debug-tweaks"' >> $@
 	@echo 'USER_CLASSES = "buildstats"' >> $@
+	@echo '#PRSERV_HOST = "localhost:0"' >> $@
 
 
 LOCAL_CONF_HASH := $(call hash, \
@@ -320,4 +482,4 @@ $(TOPDIR)/conf/bblayers.conf: $(DEPDIR)/.bblayers.conf.$(BBLAYERS_CONF_HASH)
 $(CONFDEPS):
 	@test -d $(@D) || mkdir -p $(@D)
 	@$(RM) $(basename $@).*
-	@touch $@
+	@touch $@  
