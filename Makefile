@@ -50,7 +50,7 @@ brands=dags
 else ifeq ($(MACHINEBUILD),mediabox)
 brands=dags 
 else ifeq ($(MACHINEBUILD),quadbox2400)
-brands=dags 
+brands=skylake 
 else ifeq ($(MACHINEBUILD),mutant2400)
 brands=skylake
 else ifeq ($(MACHINEBUILD),classm)
