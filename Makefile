@@ -43,6 +43,8 @@ else ifeq ($(MACHINEBUILD),optimussos1plus)
 brands=dags
 else ifeq ($(MACHINEBUILD),optimussos2plus)
 brands=dags
+else ifeq ($(MACHINEBUILD),optimussos3plus)
+brands=dags
 else ifeq ($(MACHINEBUILD),optimussos1)
 brands=dags
 else ifeq ($(MACHINEBUILD),optimussos2)
@@ -241,6 +243,9 @@ MACHINEBUILD=optimussos1plus
 else ifeq ($(MACHINEBUILD),optimussos2plus)
 MACHINE=dags3
 MACHINEBUILD=optimussos2plus
+else ifeq ($(MACHINEBUILD),optimussos3plus)
+MACHINE=dags3
+MACHINEBUILD=optimussos3plus
 else ifeq ($(MACHINEBUILD),optimussos1)
 MACHINE=dags1
 MACHINEBUILD=optimussos1
