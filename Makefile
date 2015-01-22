@@ -99,6 +99,12 @@ else ifeq ($(MACHINEBUILD),mbmini)
 brands=ini
 else ifeq ($(MACHINEBUILD),atemio5x00)
 brands=ini
+else ifeq ($(MACHINEBUILD),atemio6000)
+brands=ini
+else ifeq ($(MACHINEBUILD),atemio6100)
+brands=ini
+else ifeq ($(MACHINEBUILD),atemio6200)
+brands=ini
 else ifeq ($(MACHINEBUILD),atemionemesis)
 brands=ini
 else ifeq ($(MACHINEBUILD),mbtwin)
@@ -137,6 +143,10 @@ else ifeq ($(MACHINEBUILD),vusolo)
 brands=vuplus
 else ifeq ($(MACHINEBUILD),vuultimo)
 brands=vuplus
+else ifeq ($(MACHINEBUILD),vuzero)
+brands=vuplus
+else ifeq ($(MACHINEBUILD),vusolose)
+brands=vuplus
 else ifeq ($(MACHINEBUILD),gb800se)
 brands=gigablue
 else ifeq ($(MACHINEBUILD),gb800seplus)
@@ -157,6 +167,10 @@ else ifeq ($(MACHINEBUILD),dm800)
 brands=dream
 else ifeq ($(MACHINEBUILD),dm7020hd)
 brands=dream
+else ifeq ($(MACHINEBUILD),formuler1)
+brands=formuler
+else ifeq ($(MACHINEBUILD),formuler3)
+brands=formuler
 endif
 
 BBLAYERS ?= \
@@ -327,6 +341,15 @@ MACHINEBUILD=mbmini
 else ifeq ($(MACHINEBUILD),atemio5x00)
 MACHINE=inihde
 MACHINEBUILD=atemio5x00
+else ifeq ($(MACHINEBUILD),atemio6000)
+MACHINE=inihde2
+MACHINEBUILD=atemio6000
+else ifeq ($(MACHINEBUILD),atemio6100)
+MACHINE=inihde2
+MACHINEBUILD=atemio6100
+else ifeq ($(MACHINEBUILD),atemio6200)
+MACHINE=inihde2
+MACHINEBUILD=atemio6200
 else ifeq ($(MACHINEBUILD),atemionemesis)
 MACHINE=inihdp
 MACHINEBUILD=atemionemesis
