@@ -171,6 +171,8 @@ else ifeq ($(MACHINEBUILD),formuler1)
 brands=formuler
 else ifeq ($(MACHINEBUILD),formuler3)
 brands=formuler
+else ifeq ($(MACHINEBUILD),et4x00)
+brands=xtrend
 endif
 
 BBLAYERS ?= \
