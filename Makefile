@@ -167,6 +167,8 @@ else ifeq ($(MACHINEBUILD),dm800)
 brands=dream
 else ifeq ($(MACHINEBUILD),dm7020hd)
 brands=dream
+else ifeq ($(MACHINEBUILD),dm7080)
+brands=dream
 else ifeq ($(MACHINEBUILD),formuler1)
 brands=formuler
 else ifeq ($(MACHINEBUILD),formuler3)
