@@ -185,6 +185,8 @@ else ifeq ($(MACHINEBUILD),sparkone)
 brands=fulan
 else ifeq ($(MACHINEBUILD),arguspingulux)
 brands=fulan
+else ifeq ($(MACHINEBUILD),twinboxlcd)
+brands=ceryon
 endif
 
 BBLAYERS ?= \
@@ -472,6 +474,9 @@ MACHINEBUILD=giavatar
 else ifeq ($(MACHINEBUILD),sparkone)
 MACHINE=spark7162
 MACHINEBUILD=sparkone
+else ifeq ($(MACHINEBUILD),twinboxlcd)
+MACHINE=7100s
+MACHINEBUILD=twinboxlcd
 endif
 
 initialize: init
