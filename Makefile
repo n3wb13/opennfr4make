@@ -297,10 +297,10 @@ else ifeq ($(MACHINEBUILD),classm)
 MACHINE=odinm7
 MACHINEBUILD=classm
 else ifeq ($(MACHINEBUILD),saxodin)
-MACHINE=odinm7s
+MACHINE=odinm7
 MACHINEBUILD=axodin
 else ifeq ($(MACHINEBUILD),caxodin)
-MACHINE=odinm7c
+MACHINE=odinm7
 MACHINEBUILD=axodin
 else ifeq ($(MACHINEBUILD),axodin)
 MACHINE=odinm7
