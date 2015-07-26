@@ -509,6 +509,12 @@ MACHINEBUILD=gbx1
 else ifeq ($(MACHINEBUILD),gbx3)
 MACHINE=gb7362
 MACHINEBUILD=gbx3
+else ifeq ($(MACHINEBUILD),xpeedlxcs2)
+MACHINE=ultramini
+MACHINEBUILD=xpeedlxcs2
+else ifeq ($(MACHINEBUILD),xpeedlxcc)
+MACHINE=ultramini
+MACHINEBUILD=xpeedlxcc
 endif
 
 initialize: init
