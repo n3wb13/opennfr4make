@@ -270,16 +270,16 @@ else ifeq ($(MACHINEBUILD),force1)
 MACHINE=dags3
 MACHINEBUILD=force1
 else ifeq ($(MACHINEBUILD),optimussos1plus)
-MACHINE=dags7362
+MACHINE=dags3
 MACHINEBUILD=optimussos1plus
 else ifeq ($(MACHINEBUILD),optimussos2plus)
-MACHINE=dags7362
+MACHINE=dags3
 MACHINEBUILD=optimussos2plus
 else ifeq ($(MACHINEBUILD),optimussos3plus)
-MACHINE=dags7362
+MACHINE=dags3
 MACHINEBUILD=optimussos3plus
 else ifeq ($(MACHINEBUILD),optimussos1)
-MACHINE=dags7335
+MACHINE=dags1
 MACHINEBUILD=optimussos1
 else ifeq ($(MACHINEBUILD),optimussos2)
 MACHINE=dags2
