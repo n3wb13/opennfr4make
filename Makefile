@@ -276,7 +276,7 @@ else ifeq ($(MACHINEBUILD),optimussos2plus)
 MACHINE=dags7362
 MACHINEBUILD=optimussos2plus
 else ifeq ($(MACHINEBUILD),optimussos3plus)
-MACHINE=dags7362
+MACHINE=dags7356
 MACHINEBUILD=optimussos3plus
 else ifeq ($(MACHINEBUILD),optimussos1)
 MACHINE=dags7335
