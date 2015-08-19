@@ -189,6 +189,10 @@ else ifeq ($(MACHINEBUILD),twinboxlcd)
 brands=ceryon
 else ifeq ($(MACHINEBUILD),odin2hybrid)
 brands=ceryon
+else ifeq ($(MACHINEBUILD),xpeedlxcs2)
+brands=ultramini
+else ifeq ($(MACHINEBUILD),xpeedlxcc)
+brands=ultramini
 endif
 
 BBLAYERS ?= \
