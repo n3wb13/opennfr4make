@@ -189,6 +189,8 @@ else ifeq ($(MACHINEBUILD),twinboxlcd)
 brands=ceryon
 else ifeq ($(MACHINEBUILD),odin2hybrid)
 brands=ceryon
+else ifeq ($(MACHINEBUILD),osmini)
+brands=xcore
 endif
 
 BBLAYERS ?= \
@@ -482,6 +484,9 @@ MACHINEBUILD=twinboxlcd
 else ifeq ($(MACHINEBUILD),odin2hybrid)
 MACHINE=7300s
 MACHINEBUILD=odin2hybrid
+else ifeq ($(MACHINEBUILD),osmini)
+MACHINE=xc7362
+MACHINEBUILD=osmini
 endif
 
 initialize: init
