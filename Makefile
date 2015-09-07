@@ -193,6 +193,8 @@ else ifeq ($(MACHINEBUILD),xpeedlxcs2)
 brands=ultramini
 else ifeq ($(MACHINEBUILD),xpeedlxcc)
 brands=ultramini
+else ifeq ($(MACHINEBUILD),osmini)
+brands=xcore
 endif
 
 BBLAYERS ?= \
@@ -519,6 +521,9 @@ MACHINEBUILD=xpeedlxcs2
 else ifeq ($(MACHINEBUILD),xpeedlxcc)
 MACHINE=ultramini
 MACHINEBUILD=xpeedlxcc
+else ifeq ($(MACHINEBUILD),osmini)
+MACHINE=xc7362
+MACHINEBUILD=osmini
 endif
 
 initialize: init
