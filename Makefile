@@ -486,7 +486,7 @@ else ifeq ($(MACHINEBUILD),twinboxlcd)
 MACHINE=7100s
 MACHINEBUILD=twinboxlcd
 else ifeq ($(MACHINEBUILD),opticumtt)
-MACHINE=ini-435oc
+MACHINE=inihde2
 MACHINEBUILD=opticumtt
 else ifeq ($(MACHINEBUILD),gb800se)
 MACHINE=gb7325
