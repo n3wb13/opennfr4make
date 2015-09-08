@@ -187,8 +187,8 @@ else ifeq ($(MACHINEBUILD),arguspingulux)
 brands=fulan
 else ifeq ($(MACHINEBUILD),twinboxlcd)
 brands=ceryon
-else ifeq ($(MACHINEBUILD),odin2hybrid)
-brands=ceryon
+else ifeq ($(MACHINEBUILD),opticumtt)
+brands=ini
 else ifeq ($(MACHINEBUILD),xpeedlxcs2)
 brands=ultramini
 else ifeq ($(MACHINEBUILD),xpeedlxcc)
@@ -485,9 +485,9 @@ MACHINEBUILD=sparkone
 else ifeq ($(MACHINEBUILD),twinboxlcd)
 MACHINE=7100s
 MACHINEBUILD=twinboxlcd
-else ifeq ($(MACHINEBUILD),odin2hybrid)
-MACHINE=7300s
-MACHINEBUILD=odin2hybrid
+else ifeq ($(MACHINEBUILD),opticumtt)
+MACHINE=ini-435oc
+MACHINEBUILD=opticumtt
 else ifeq ($(MACHINEBUILD),gb800se)
 MACHINE=gb7325
 MACHINEBUILD=gb800se
