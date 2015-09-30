@@ -191,7 +191,7 @@ else ifeq ($(MACHINEBUILD),odin2hybrid)
 brands=ceryon
 else ifeq ($(MACHINEBUILD),osmini)
 brands=xcore
-else ifeq ($(MACHINEBUILD),spycatmini)
+else ifeq ($(MACHINEBUILD),spycat)
 brands=xcore
 endif
 
@@ -489,9 +489,9 @@ MACHINEBUILD=odin2hybrid
 else ifeq ($(MACHINEBUILD),osmini)
 MACHINE=xc7362
 MACHINEBUILD=osmini
-else ifeq ($(MACHINEBUILD),spycatmini)
+else ifeq ($(MACHINEBUILD),spycat)
 MACHINE=xc7362
-MACHINEBUILD=spycatmini
+MACHINEBUILD=spycat
 endif
 
 initialize: init
