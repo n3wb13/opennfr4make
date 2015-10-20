@@ -277,7 +277,7 @@ else ifeq ($(MACHINEBUILD),iqonios300hd)
 MACHINE=dags7335
 MACHINEBUILD=iqonios300hd
 else ifeq ($(MACHINEBUILD),force1)
-MACHINE=dags3
+MACHINE=dags7356
 MACHINEBUILD=force1
 else ifeq ($(MACHINEBUILD),optimussos1plus)
 MACHINE=dags7356
