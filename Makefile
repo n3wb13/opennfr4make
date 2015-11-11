@@ -147,6 +147,8 @@ else ifeq ($(MACHINEBUILD),vuzero)
 brands=vuplus
 else ifeq ($(MACHINEBUILD),vusolose)
 brands=vuplus
+else ifeq ($(MACHINEBUILD),vusolo4k)
+brands=vuplus
 else ifeq ($(MACHINEBUILD),gb800se)
 brands=gigablue
 else ifeq ($(MACHINEBUILD),gb800seplus)
