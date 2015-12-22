@@ -515,9 +515,9 @@ MACHINEBUILD=gbultrase
 else ifeq ($(MACHINEBUILD),gbultraue)
 MACHINE=gb7362
 MACHINEBUILD=gbultraue
-else ifeq ($(MACHINEBUILD),gbuad)
+else ifeq ($(MACHINEBUILD),gbquad)
 MACHINE=gb7356
-MACHINEBUILD=gbuad
+MACHINEBUILD=gbquad
 else ifeq ($(MACHINEBUILD),gbquadplus)
 MACHINE=gb7356
 MACHINEBUILD=gbquadplus
