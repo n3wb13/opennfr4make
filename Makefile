@@ -545,7 +545,7 @@ else ifeq ($(MACHINEBUILD),spycat)
 MACHINE=xc7362
 MACHINEBUILD=spycat
 else ifeq ($(MACHINEBUILD),e4hd)
-MACHINE=7000s
+MACHINE=7100s
 MACHINEBUILD=e4hd
 endif
 
