@@ -203,6 +203,10 @@ else ifeq ($(MACHINEBUILD),spycat)
 brands=xcore
 else ifeq ($(MACHINEBUILD),e4hd)
 brands=ceryon
+else ifeq ($(MACHINEBUILD),sf3038)
+brands=broadmedia
+else ifeq ($(MACHINEBUILD),sf108)
+brands=tripledot
 endif
 
 BBLAYERS ?= \
@@ -547,6 +551,12 @@ MACHINEBUILD=spycat
 else ifeq ($(MACHINEBUILD),e4hd)
 MACHINE=7000s
 MACHINEBUILD=e4hd
+else ifeq ($(MACHINEBUILD),sf3038)
+MACHINE=g300
+MACHINEBUILD=sf3038
+else ifeq ($(MACHINEBUILD),sf108)
+MACHINE=vg5000
+MACHINEBUILD=sf108
 endif
 
 initialize: init
