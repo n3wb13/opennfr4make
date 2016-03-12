@@ -195,6 +195,8 @@ else ifeq ($(MACHINEBUILD),xpeedlxcs2)
 brands=ultramini
 else ifeq ($(MACHINEBUILD),xpeedlxcc)
 brands=ultramini
+else ifeq ($(MACHINEBUILD),xpeedlxpro)
+brands=ini
 else ifeq ($(MACHINEBUILD),osmini)
 brands=xcore
 else ifeq ($(MACHINEBUILD),triplex)
@@ -539,6 +541,9 @@ MACHINEBUILD=xpeedlxcs2
 else ifeq ($(MACHINEBUILD),xpeedlxcc)
 MACHINE=ultramini
 MACHINEBUILD=xpeedlxcc
+else ifeq ($(MACHINEBUILD),xpeedlxpro)
+MACHINE=yhgd5034
+MACHINEBUILD=xpeedlxpro
 else ifeq ($(MACHINEBUILD),osmini)
 MACHINE=xc7362
 MACHINEBUILD=osmini
