@@ -542,7 +542,7 @@ else ifeq ($(MACHINEBUILD),xpeedlxcc)
 MACHINE=ultramini
 MACHINEBUILD=xpeedlxcc
 else ifeq ($(MACHINEBUILD),xpeedlxpro)
-MACHINE=yhgd5034
+MACHINE=inihde2
 MACHINEBUILD=xpeedlxpro
 else ifeq ($(MACHINEBUILD),osmini)
 MACHINE=xc7362
