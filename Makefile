@@ -219,6 +219,7 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-openembedded/meta-python \
 	$(CURDIR)/openembedded-core/meta \
 	$(CURDIR)/meta-oe-alliance/meta-oe \
+	$(CURDUR)/meta-local \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-$(brands) \
 
 CONFFILES = \
