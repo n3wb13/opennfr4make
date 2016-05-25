@@ -209,6 +209,8 @@ else ifeq ($(MACHINEBUILD),sf3038)
 brands=broadmedia
 else ifeq ($(MACHINEBUILD),sf108)
 brands=tripledot
+else ifeq ($(MACHINEBUILD),sf98)
+brands=tripledot
 endif
 
 BBLAYERS ?= \
@@ -563,6 +565,9 @@ MACHINEBUILD=sf3038
 else ifeq ($(MACHINEBUILD),sf108)
 MACHINE=vg5000
 MACHINEBUILD=sf108
+else ifeq ($(MACHINEBUILD),sf98)
+MACHINE=yh7362
+MACHINEBUILD=sf98
 endif
 
 initialize: init
