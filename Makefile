@@ -203,6 +203,8 @@ else ifeq ($(MACHINEBUILD),triplex)
 brands=ax
 else ifeq ($(MACHINEBUILD),spycat)
 brands=xcore
+else ifeq ($(MACHINEBUILD),spycatmini)
+brands=xcore
 else ifeq ($(MACHINEBUILD),e4hd)
 brands=ceryon
 else ifeq ($(MACHINEBUILD),sf3038)
@@ -556,6 +558,9 @@ MACHINEBUILD=triplex
 else ifeq ($(MACHINEBUILD),spycat)
 MACHINE=xc7362
 MACHINEBUILD=spycat
+else ifeq ($(MACHINEBUILD),spycatmini)
+MACHINE=xc7362
+MACHINEBUILD=spycatmini
 else ifeq ($(MACHINEBUILD),e4hd)
 MACHINE=7000s
 MACHINEBUILD=e4hd
