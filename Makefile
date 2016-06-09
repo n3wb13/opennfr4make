@@ -193,6 +193,10 @@ else ifeq ($(MACHINEBUILD),sf208)
 brands=ceryon
 else ifeq ($(MACHINEBUILD),sf228)
 brands=ceryon
+else ifeq ($(MACHINEBUILD),odin2hybrid)
+brands=ceryon
+else ifeq ($(MACHINEBUILD),odinplus)
+brands=ceryon
 else ifeq ($(MACHINEBUILD),opticumtt)
 brands=ini
 else ifeq ($(MACHINEBUILD),xpeedlxcs2)
@@ -514,6 +518,12 @@ MACHINEBUILD=sf208
 else ifeq ($(MACHINEBUILD),sf228)
 MACHINE=7210s
 MACHINEBUILD=sf228
+else ifeq ($(MACHINEBUILD),odin2hybrid)
+MACHINE=7300s
+MACHINEBUILD=odin2hybrid
+else ifeq ($(MACHINEBUILD),odinplus)
+MACHINE=7400s
+MACHINEBUILD=odinplus
 else ifeq ($(MACHINEBUILD),opticumtt)
 MACHINE=inihde2
 MACHINEBUILD=opticumtt
