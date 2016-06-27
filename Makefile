@@ -221,6 +221,10 @@ else ifeq ($(MACHINEBUILD),sf108)
 brands=tripledot
 else ifeq ($(MACHINEBUILD),sf98)
 brands=tripledot
+else ifeq ($(MACHINEBUILD),mutant51)
+brands=gfutures
+else ifeq ($(MACHINEBUILD),ax51)
+brands=gfutures
 endif
 
 BBLAYERS ?= \
@@ -593,6 +597,12 @@ MACHINEBUILD=sf108
 else ifeq ($(MACHINEBUILD),sf98)
 MACHINE=yh7362
 MACHINEBUILD=sf98
+else ifeq ($(MACHINEBUILD),mutant51)
+MACHINE=hd51
+MACHINEBUILD=mutant51
+else ifeq ($(MACHINEBUILD),ax51)
+MACHINE=hd51
+MACHINEBUILD=ax51
 endif
 
 initialize: init
